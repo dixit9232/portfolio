@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#080b09" />
+
+  <title>dixit pambhar — senior flutter & full-stack developer</title>
+  <meta name="description" content="Dixit Pambhar — Senior Flutter & Full-Stack Developer. 5+ years building cross-platform apps & resilient backends in Dart, Flutter, React, Node.js, Python & Laravel." />
+  <meta name="author" content="Dixit Pambhar" />
+  <link rel="canonical" href="https://dixitpambhar.dev/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="dixit pambhar — senior flutter & full-stack developer" />
+  <meta property="og:description" content="5+ years building scalable applications across mobile and web. dart · flutter · react · node · python · laravel" />
+  <meta property="og:url" content="https://dixitpambhar.dev/" />
+  <meta property="og:image" content="assets/og-cover.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;0,800;1,400&display=swap" />
+
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <script>
+    document.documentElement.classList.remove("no-js");
+    document.documentElement.classList.add("js");
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Dixit Pambhar",
+    "jobTitle": "Senior Flutter & Full-Stack Developer",
+    "email": "mailto:dixitpambhar9232@gmail.com",
+    "telephone": "+91-95102-61318",
+    "address": { "@type": "PostalAddress", "addressLocality": "Surat", "addressRegion": "Gujarat", "addressCountry": "IN" },
+    "url": "https://dixitpambhar.dev/",
+    "knowsAbout": ["Flutter","Dart","React.js","Node.js","Python","Laravel","Firebase","GraphQL","Cross-platform mobile development"]
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">skip to content</a>
+
+  <!-- ============ BOOT SEQUENCE ============ -->
+  <div class="boot" id="boot" aria-hidden="true">
+    <div class="boot__inner">
+      <pre class="boot__log" id="bootLog"></pre>
+      <div class="boot__bar"><span id="bootBar"></span></div>
+    </div>
+  </div>
+
+  <!-- ============ CRT OVERLAY ============ -->
+  <div class="crt-overlay" aria-hidden="true"></div>
+
+  <!-- ============ CURSOR ============ -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+
+  <!-- ============ TOP BAR (window chrome + nav) ============ -->
+  <header class="bar" id="bar">
+    <div class="bar__lights" aria-hidden="true"><i></i><i></i><i></i></div>
+    <a class="bar__path" href="#hero" data-cursor="hover">
+      <span class="bar__user">dixit</span><span class="bar__at">@</span><span class="bar__host">portfolio</span>:<span class="bar__cwd">~</span>
+    </a>
+    <nav class="bar__nav" aria-label="Primary">
+      <a href="#about" data-navlink data-cursor="hover">about</a>
+      <a href="#experience" data-navlink data-cursor="hover">log</a>
+      <a href="#skills" data-navlink data-cursor="hover">skills</a>
+      <a href="#work" data-navlink data-cursor="hover">projects</a>
+      <a href="#contact" data-navlink data-cursor="hover">contact</a>
+    </nav>
+    <button class="bar__term" id="termOpen" data-cursor="hover" title="Open interactive shell (`)">
+      <span class="bar__term-sign">&gt;_</span> shell
+    </button>
+    <button class="bar__crt" id="crtToggle" aria-pressed="false" data-cursor="hover" title="Toggle CRT effect">
+      <span class="bar__crt-dot"></span> crt
+    </button>
+    <button class="bar__menu" id="menuToggle" aria-label="Open menu" aria-expanded="false" data-cursor="hover">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ============ MOBILE MENU ============ -->
+  <div class="drawer" id="drawer" aria-hidden="true">
+    <nav aria-label="Mobile">
+      <a href="#about" data-drawerlink><span>~/</span>about</a>
+      <a href="#experience" data-drawerlink><span>~/</span>experience</a>
+      <a href="#skills" data-drawerlink><span>~/</span>skills</a>
+      <a href="#work" data-drawerlink><span>~/</span>projects</a>
+      <a href="#education" data-drawerlink><span>~/</span>education</a>
+      <a href="#contact" data-drawerlink><span>~/</span>contact</a>
+    </nav>
+    <a class="drawer__resume" href="assets/Dixit_Pambhar_Sr._Flutter_%26_Full_Stack_Developer_Resume.pdf" download="Dixit_Pambhar_Resume.pdf" data-drawerlink>$ ./download-resume.pdf ↓</a>
+  </div>
+
+  <main id="main">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero section" id="hero" aria-label="Introduction">
+      <div class="container hero__inner">
+        <p class="hero__line"><span class="cmd__path">~/dixit-pambhar</span> <span class="cmd__sign">$</span> whoami</p>
+
+        <h1 class="hero__name" aria-label="Dixit Pambhar">
+          <span class="hero__name-line">dixit</span><span class="hero__name-line hero__name-line--alt">_pambhar</span>
+        </h1>
+
+        <p class="hero__role">
+          <span class="comment"># </span><span data-typewriter data-text="senior flutter &amp; full-stack developer">senior flutter &amp; full-stack developer</span><span class="caret" aria-hidden="true"></span>
+        </p>
+
+        <div class="hero__out" data-reveal>
+          <p><span class="cmd__path">~/dixit-pambhar</span> <span class="cmd__sign">$</span> cat intro.txt</p>
+          <p class="hero__bio">
+            5+ years turning ambitious product ideas into fast, scalable apps across
+            <span class="hl">mobile</span> and <span class="hl">web</span>. I care about clean
+            architecture, performance budgets, and releases that don't keep anyone up at night.
+          </p>
+          <ul class="hero__stack" aria-label="Core stack">
+            <li>dart</li><li>flutter</li><li>react</li><li>node</li><li>python</li><li>laravel</li>
+          </ul>
+        </div>
+
+        <div class="hero__cta" data-reveal>
+          <a class="run run--solid" href="#work" data-cursor="hover">
+            <span class="run__sign">$</span> ./view-projects
+          </a>
+          <a class="run" href="#contact" data-cursor="hover">
+            <span class="run__sign">$</span> ./start-a-project
+          </a>
+          <a class="run" href="assets/Dixit_Pambhar_Sr._Flutter_%26_Full_Stack_Developer_Resume.pdf" download="Dixit_Pambhar_Resume.pdf" data-cursor="hover">
+            <span class="run__sign">$</span> wget resume.pdf
+          </a>
+        </div>
+
+        <p class="hero__status" data-reveal>
+          <span class="dot"></span> available for senior / contract roles · surat, IN · open to remote
+        </p>
+
+        <button class="hero__shell" id="termOpenHero" data-reveal data-cursor="hover">
+          <span class="hero__shell-sign">$</span>
+          <span>this is a real shell — type <kbd>help</kbd></span>
+          <span class="hero__shell-key">press <kbd>`</kbd></span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="section about" id="about" aria-labelledby="about-h">
+      <div class="container">
+        <p class="cmd" data-reveal>
+          <span class="cmd__path">~/dixit-pambhar</span> <span class="cmd__sign">$</span>
+          <span class="cmd__text">cat <b>about.md</b></span>
+        </p>
+
+        <div class="about__grid">
+          <div class="about__doc" data-reveal>
+            <h2 class="out-title" id="about-h"># whoami, the long version</h2>
+            <p>
+              I started writing UI as an intern and grew into leading Flutter architecture for
+              products that ship to <span class="hl">hundreds of client configurations</span>.
+              My work lives where considered design meets dependable engineering.
+            </p>
+            <p>
+              I build cross-platform apps with Flutter and back them with services in Node.js,
+              Python and Laravel — wiring Firebase, payment gateways, realtime sockets and
+              third-party integrations. Today I lead Flutter development at
+              <span class="hl">DecodeUp</span> and mentor toward the same standard of craft.
+            </p>
+            <ul class="about__rules">
+              <li><span class="comment">//</span> architecture before features</li>
+              <li><span class="comment">//</span> performance is a feature</li>
+              <li><span class="comment">//</span> ship, measure, refine</li>
+            </ul>
+          </div>
+
+          <div class="about__stats" data-reveal>
+            <p class="about__stats-cmd"><span class="cmd__sign">$</span> uptime --career</p>
+            <ul>
+              <li><b data-counter data-to="5" data-suffix="+">0</b><span>years in production</span></li>
+              <li><b data-counter data-to="190" data-suffix="+">0</b><span>client configs / 1 codebase</span></li>
+              <li><b data-counter data-to="7" data-suffix="+">0</b><span>flagship apps shipped</span></li>
+              <li><b data-counter data-to="40" data-suffix="+">0</b><span>tools in active stack</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EXPERIENCE (git log) ===================== -->
+    <section class="section log" id="experience" aria-labelledby="log-h">
+      <div class="container">
+        <p class="cmd" data-reveal>
+          <span class="cmd__path">~/dixit-pambhar</span> <span class="cmd__sign">$</span>
+          <span class="cmd__text">git log <span class="flag">--author</span>=<span class="str">"dixit"</span> <span class="flag">--graph</span></span>
+        </p>
+        <h2 class="sr-only" id="log-h">Work experience</h2>
+
+        <ol class="commits">
+          <li class="commit" data-reveal>
+            <div class="commit__graph" aria-hidden="true"><span class="commit__node"></span></div>
+            <div class="commit__body">
+              <p class="commit__head">
+                <span class="commit__hash">a1f0c2e</span>
+                <span class="commit__ref">(HEAD → main)</span>
+                <span class="commit__date">Jan 2026 — present</span>
+              </p>
+              <h3 class="commit__title">Senior Flutter Developer <span class="commit__type">· contract</span></h3>
+              <p class="commit__org">DecodeUp (P) Limited <span class="comment"># surat, gujarat</span></p>
+              <ul class="commit__points">
+                <li>leading flutter application development across client projects</li>
+                <li>designing scalable architectures &amp; maintaining code-quality standards</li>
+                <li>partnering with stakeholders to deliver reliable, high-performing solutions</li>
+                <li>reviewing code, optimizing performance, supporting successful releases</li>
+              </ul>
+              <p class="commit__tags"><span>flutter</span><span>architecture</span><span>code-review</span><span>leadership</span></p>
+            </div>
+          </li>
+
+          <li class="commit" data-reveal>
+            <div class="commit__graph" aria-hidden="true"><span class="commit__node"></span></div>
+            <div class="commit__body">
+              <p class="commit__head">
+                <span class="commit__hash">9c4be71</span>
+                <span class="commit__date">Nov 2021 — Jan 2026</span>
+              </p>
+              <h3 class="commit__title">Senior Flutter &amp; Full-Stack Developer</h3>
+              <p class="commit__org">Anantkaal LLP <span class="comment"># surat, gujarat</span></p>
+              <ul class="commit__points">
+                <li>developed &amp; launched cross-platform mobile apps with flutter</li>
+                <li>built backend services and APIs using node.js, python &amp; laravel</li>
+                <li>integrated firebase, payment gateways and third-party services</li>
+                <li>worked directly with clients and mentored junior developers</li>
+              </ul>
+              <p class="commit__tags"><span>flutter</span><span>node.js</span><span>python</span><span>laravel</span><span>firebase</span><span>mentoring</span></p>
+            </div>
+          </li>
+
+          <li class="commit" data-reveal>
+            <div class="commit__graph" aria-hidden="true"><span class="commit__node"></span></div>
+            <div class="commit__body">
+              <p class="commit__head">
+                <span class="commit__hash">3e8a05d</span>
+                <span class="commit__ref">(initial commit)</span>
+                <span class="commit__date">May 2021 — Nov 2021</span>
+              </p>
+              <h3 class="commit__title">Flutter Developer Intern <span class="commit__type">· remote</span></h3>
+              <p class="commit__org">Shubhchintak Technology Pvt. Ltd. <span class="comment"># mumbai</span></p>
+              <ul class="commit__points">
+                <li>assisted in developing flutter apps and implementing UI features</li>
+                <li>integrated APIs and firebase services for app functionality</li>
+                <li>performed testing, bug fixing and continuous improvements</li>
+                <li>collaborated through git and code-review practices</li>
+              </ul>
+              <p class="commit__tags"><span>flutter</span><span>rest-api</span><span>firebase</span><span>git</span></p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section class="section skills" id="skills" aria-labelledby="skills-h">
+      <div class="container">
+        <p class="cmd" data-reveal>
+          <span class="cmd__path">~/dixit-pambhar</span> <span class="cmd__sign">$</span>
+          <span class="cmd__text">skills <span class="flag">--list</span> <span class="flag">--by-domain</span></span>
+        </p>
+        <h2 class="sr-only" id="skills-h">Skills</h2>
+
+        <div class="skills__grid">
+          <article class="skl" data-reveal>
+            <h3 class="skl__head">mobile/ <span class="comment"># core specialization</span></h3>
+            <ul class="skl__list">
+              <li data-skill data-level="96"><span class="skl__name">dart · flutter</span><span class="skl__bar"><i></i></span><span class="skl__lvl">expert</span></li>
+              <li data-skill data-level="90"><span class="skl__name">riverpod · bloc · getx</span><span class="skl__bar"><i></i></span><span class="skl__lvl">expert</span></li>
+              <li data-skill data-level="82"><span class="skl__name">kotlin · java · mvvm</span><span class="skl__bar"><i></i></span><span class="skl__lvl">advanced</span></li>
+            </ul>
+          </article>
+
+          <article class="skl" data-reveal>
+            <h3 class="skl__head">frontend/</h3>
+            <ul class="skl__list">
+              <li data-skill data-level="92"><span class="skl__name">javascript · typescript</span><span class="skl__bar"><i></i></span><span class="skl__lvl">expert</span></li>
+              <li data-skill data-level="88"><span class="skl__name">react · next.js</span><span class="skl__bar"><i></i></span><span class="skl__lvl">advanced</span></li>
+              <li data-skill data-level="80"><span class="skl__name">redux · tanstack · tailwind</span><span class="skl__bar"><i></i></span><span class="skl__lvl">advanced</span></li>
+            </ul>
+          </article>
+
+          <article class="skl" data-reveal>
+            <h3 class="skl__head">backend/</h3>
+            <ul class="skl__list">
+              <li data-skill data-level="90"><span class="skl__name">node · express</span><span class="skl__bar"><i></i></span><span class="skl__lvl">expert</span></li>
+              <li data-skill data-level="86"><span class="skl__name">python · fastapi · flask</span><span class="skl__bar"><i></i></span><span class="skl__lvl">advanced</span></li>
+              <li data-skill data-level="84"><span class="skl__name">laravel · graphql · socket.io</span><span class="skl__bar"><i></i></span><span class="skl__lvl">advanced</span></li>
+            </ul>
+          </article>
+
+          <article class="skl" data-reveal>
+            <h3 class="skl__head">data_&amp;_cloud/</h3>
+            <ul class="skl__list">
+              <li data-skill data-level="90"><span class="skl__name">firebase · supabase</span><span class="skl__bar"><i></i></span><span class="skl__lvl">expert</span></li>
+              <li data-skill data-level="82"><span class="skl__name">mongodb · mysql · postgres</span><span class="skl__bar"><i></i></span><span class="skl__lvl">advanced</span></li>
+              <li data-skill data-level="74"><span class="skl__name">aws · cloudflare</span><span class="skl__bar"><i></i></span><span class="skl__lvl">proficient</span></li>
+            </ul>
+          </article>
+
+          <article class="skl" data-reveal>
+            <h3 class="skl__head">tooling/</h3>
+            <ul class="skl__list">
+              <li data-skill data-level="92"><span class="skl__name">git · ci/cd</span><span class="skl__bar"><i></i></span><span class="skl__lvl">expert</span></li>
+              <li data-skill data-level="84"><span class="skl__name">unit testing · postman</span><span class="skl__bar"><i></i></span><span class="skl__lvl">advanced</span></li>
+              <li data-skill data-level="80"><span class="skl__name">figma · webhooks</span><span class="skl__bar"><i></i></span><span class="skl__lvl">advanced</span></li>
+            </ul>
+          </article>
+
+          <article class="skl skl--note" data-reveal>
+            <h3 class="skl__head">$ echo $STACK</h3>
+            <p class="skl__note">
+              full-stack by habit, mobile-first by heart. I pick the boring, reliable
+              tool when it ships faster — and reach for the sharp one when it matters.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== WORK (ls + json cards) ===================== -->
+    <section class="section work" id="work" aria-labelledby="work-h">
+      <div class="container">
+        <p class="cmd" data-reveal>
+          <span class="cmd__path">~/dixit-pambhar/projects</span> <span class="cmd__sign">$</span>
+          <span class="cmd__text">ls <span class="flag">--detail</span> | grep <span class="str">$FILTER</span></span>
+        </p>
+        <h2 class="sr-only" id="work-h">Selected projects</h2>
+
+        <div class="work__filters" role="tablist" aria-label="Filter projects" data-reveal>
+          <button class="filt is-active" role="tab" aria-selected="true" data-filter="all" data-cursor="hover">--all</button>
+          <button class="filt" role="tab" aria-selected="false" data-filter="saas" data-cursor="hover">--saas</button>
+          <button class="filt" role="tab" aria-selected="false" data-filter="gaming" data-cursor="hover">--gaming</button>
+          <button class="filt" role="tab" aria-selected="false" data-filter="edtech" data-cursor="hover">--edtech</button>
+          <button class="filt" role="tab" aria-selected="false" data-filter="health" data-cursor="hover">--health</button>
+          <button class="filt" role="tab" aria-selected="false" data-filter="ondemand" data-cursor="hover">--on-demand</button>
+        </div>
+
+        <div class="work__grid" data-projects>
+
+          <article class="card card--wide" data-cat="saas" data-reveal data-cursor="hover">
+            <div class="card__bar"><span class="card__file">parking-system.json</span><span class="card__meta">enterprise · saas</span></div>
+            <pre class="card__code"><span class="punc">{</span>
+  <span class="key">"name"</span><span class="punc">:</span> <span class="str">"Parking Management System"</span><span class="punc">,</span>
+  <span class="key">"role"</span><span class="punc">:</span> <span class="str">"officer-side SaaS platform"</span><span class="punc">,</span>
+  <span class="key">"summary"</span><span class="punc">:</span> <span class="str">"190+ client configs from one codebase —</span>
+            <span class="str">features, workflows &amp; themes driven by backend config"</span><span class="punc">,</span>
+  <span class="key">"configs"</span><span class="punc">:</span> <span class="num">190</span><span class="punc">,</span> <span class="key">"codebase"</span><span class="punc">:</span> <span class="num">1</span><span class="punc">,</span>
+  <span class="key">"stack"</span><span class="punc">:</span> <span class="punc">[</span><span class="str">"flutter"</span><span class="punc">,</span> <span class="str">"dynamic-theming"</span><span class="punc">,</span> <span class="str">"rest"</span><span class="punc">,</span> <span class="str">"multi-tenant"</span><span class="punc">]</span><span class="punc">,</span>
+  <span class="key">"status"</span><span class="punc">:</span> <span class="kw">"shipped"</span>
+<span class="punc">}</span></pre>
+          </article>
+
+          <article class="card" data-cat="gaming" data-reveal data-cursor="hover">
+            <div class="card__bar"><span class="card__file">neon.json</span><span class="card__meta">gaming</span></div>
+            <pre class="card__code"><span class="punc">{</span>
+  <span class="key">"name"</span><span class="punc">:</span> <span class="str">"Neon"</span><span class="punc">,</span>
+  <span class="key">"summary"</span><span class="punc">:</span> <span class="str">"multiplayer board-game platform"</span><span class="punc">,</span>
+  <span class="key">"games"</span><span class="punc">:</span> <span class="punc">[</span><span class="str">"checkers"</span><span class="punc">,</span> <span class="str">"dots &amp; boxes"</span><span class="punc">,</span> <span class="str">"nine men's morris"</span><span class="punc">]</span><span class="punc">,</span>
+  <span class="key">"features"</span><span class="punc">:</span> <span class="punc">[</span><span class="str">"social-play"</span><span class="punc">,</span> <span class="str">"in-app-purchases"</span><span class="punc">]</span><span class="punc">,</span>
+  <span class="key">"stack"</span><span class="punc">:</span> <span class="punc">[</span><span class="str">"flutter"</span><span class="punc">,</span> <span class="str">"socket.io"</span><span class="punc">,</span> <span class="str">"iap"</span><span class="punc">]</span><span class="punc">,</span>
+  <span class="key">"status"</span><span class="punc">:</span> <span class="kw">"shipped"</span>
+<span class="punc">}</span></pre>
+          </article>
+
+          <article class="card" data-cat="edtech" data-reveal data-cursor="hover">
+            <div class="card__bar"><span class="card__file">cheetah.json</span><span class="card__meta">edtech</span></div>
+            <pre class="card__code"><span class="punc">{</span>
+  <span class="key">"name"</span><span class="punc">:</span> <span class="str">"Cheetah"</span><span class="punc">,</span>
+  <span class="key">"summary"</span><span class="punc">:</span> <span class="str">"learning app for grades 5–7"</span><span class="punc">,</span>
+  <span class="key">"modules"</span><span class="punc">:</span> <span class="punc">[</span><span class="str">"quizzes"</span><span class="punc">,</span> <span class="str">"practice"</span><span class="punc">,</span> <span class="str">"mock-exams"</span><span class="punc">]</span><span class="punc">,</span>
+  <span class="key">"features"</span><span class="punc">:</span> <span class="punc">[</span><span class="str">"badges"</span><span class="punc">,</span> <span class="str">"personalized-tests"</span><span class="punc">]</span><span class="punc">,</span>
+  <span class="key">"stack"</span><span class="punc">:</span> <span class="punc">[</span><span class="str">"flutter"</span><span class="punc">,</span> <span class="str">"firebase"</span><span class="punc">,</span> <span class="str">"analytics"</span><span class="punc">]</span><span class="punc">,</span>
+  <span class="key">"status"</span><span class="punc">:</span> <span class="kw">"shipped"</span>
+<span class="punc">}</span></pre>
+          </article>
+
+          <article class="card" data-cat="gaming" data-reveal data-cursor="hover">
+            <div class="card__bar"><span class="card__file">rocket-chess.json</span><span class="card__meta">gaming</span></div>
+            <pre class="card__code"><span class="punc">{</span>
+  <span class="key">"name"</span><span class="punc">:</span> <span class="str">"Rocket Chess"</span><span class="punc">,</span>
+  <span class="key">"summary"</span><span class="punc">:</span> <span class="str">"online/offline competitive chess"</span><span class="punc">,</span>
+  <span class="key">"modes"</span><span class="punc">:</span> <span class="punc">[</span><span class="str">"vs-friends"</span><span class="punc">,</span> <span class="str">"vs-random"</span><span class="punc">,</span> <span class="str">"skill-only"</span><span class="punc">]</span><span class="punc">,</span>
+  <span class="key">"features"</span><span class="punc">:</span> <span class="punc">[</span><span class="str">"chat"</span><span class="punc">,</span> <span class="str">"matchmaking"</span><span class="punc">]</span><span class="punc">,</span>
+  <span class="key">"stack"</span><span class="punc">:</span> <span class="punc">[</span><span class="str">"flutter"</span><span class="punc">,</span> <span class="str">"realtime"</span><span class="punc">]</span><span class="punc">,</span>
+  <span class="key">"status"</span><span class="punc">:</span> <span class="kw">"shipped"</span>
+<span class="punc">}</span></pre>
+          </article>
+
+          <article class="card" data-cat="edtech" data-reveal data-cursor="hover">
+            <div class="card__bar"><span class="card__file">studyak.json</span><span class="card__meta">edtech</span></div>
+            <pre class="card__code"><span class="punc">{</span>
+  <span class="key">"name"</span><span class="punc">:</span> <span class="str">"StudyAK"</span><span class="punc">,</span>
+  <span class="key">"summary"</span><span class="punc">:</span> <span class="str">"multi-field course platform"</span><span class="punc">,</span>
+  <span class="key">"fields"</span><span class="punc">:</span> <span class="punc">[</span><span class="str">"cybersecurity"</span><span class="punc">,</span> <span class="str">"data-science"</span><span class="punc">]</span><span class="punc">,</span>
+  <span class="key">"features"</span><span class="punc">:</span> <span class="punc">[</span><span class="str">"assessments"</span><span class="punc">,</span> <span class="str">"offline-download"</span><span class="punc">,</span> <span class="str">"ugc"</span><span class="punc">]</span><span class="punc">,</span>
+  <span class="key">"stack"</span><span class="punc">:</span> <span class="punc">[</span><span class="str">"flutter"</span><span class="punc">,</span> <span class="str">"offline-first"</span><span class="punc">]</span><span class="punc">,</span>
+  <span class="key">"status"</span><span class="punc">:</span> <span class="kw">"shipped"</span>
+<span class="punc">}</span></pre>
+          </article>
+
+          <article class="card" data-cat="health" data-reveal data-cursor="hover">
+            <div class="card__bar"><span class="card__file">talk-about-it.json</span><span class="card__meta">health</span></div>
+            <pre class="card__code"><span class="punc">{</span>
+  <span class="key">"name"</span><span class="punc">:</span> <span class="str">"Talk About It"</span><span class="punc">,</span>
+  <span class="key">"summary"</span><span class="punc">:</span> <span class="str">"mental-health telehealth platform"</span><span class="punc">,</span>
+  <span class="key">"channels"</span><span class="punc">:</span> <span class="punc">[</span><span class="str">"chat"</span><span class="punc">,</span> <span class="str">"video"</span><span class="punc">,</span> <span class="str">"messaging"</span><span class="punc">]</span><span class="punc">,</span>
+  <span class="key">"topics"</span><span class="punc">:</span> <span class="punc">[</span><span class="str">"stress"</span><span class="punc">,</span> <span class="str">"grief"</span><span class="punc">,</span> <span class="str">"nutrition"</span><span class="punc">,</span> <span class="str">"teens"</span><span class="punc">]</span><span class="punc">,</span>
+  <span class="key">"stack"</span><span class="punc">:</span> <span class="punc">[</span><span class="str">"flutter"</span><span class="punc">,</span> <span class="str">"webrtc"</span><span class="punc">]</span><span class="punc">,</span>
+  <span class="key">"status"</span><span class="punc">:</span> <span class="kw">"shipped"</span>
+<span class="punc">}</span></pre>
+          </article>
+
+          <article class="card" data-cat="ondemand" data-reveal data-cursor="hover">
+            <div class="card__bar"><span class="card__file">marquel-wrecking.json</span><span class="card__meta">on-demand</span></div>
+            <pre class="card__code"><span class="punc">{</span>
+  <span class="key">"name"</span><span class="punc">:</span> <span class="str">"Marquel Wrecking"</span><span class="punc">,</span>
+  <span class="key">"summary"</span><span class="punc">:</span> <span class="str">"on-demand towing (jamaica)"</span><span class="punc">,</span>
+  <span class="key">"features"</span><span class="punc">:</span> <span class="punc">[</span><span class="str">"one-tap-recovery"</span><span class="punc">,</span> <span class="str">"distance-pricing"</span><span class="punc">,</span> <span class="str">"live-dispatch"</span><span class="punc">]</span><span class="punc">,</span>
+  <span class="key">"stack"</span><span class="punc">:</span> <span class="punc">[</span><span class="str">"flutter"</span><span class="punc">,</span> <span class="str">"maps"</span><span class="punc">,</span> <span class="str">"geolocation"</span><span class="punc">,</span> <span class="str">"payments"</span><span class="punc">]</span><span class="punc">,</span>
+  <span class="key">"status"</span><span class="punc">:</span> <span class="kw">"shipped"</span>
+<span class="punc">}</span></pre>
+          </article>
+
+          <article class="card card--locked" data-cat="all" data-reveal data-cursor="hover">
+            <div class="card__bar"><span class="card__file">*.nda</span><span class="card__meta">restricted</span></div>
+            <pre class="card__code"><span class="comment"># permission denied (NDA)</span>
+<span class="punc">{</span>
+  <span class="key">"projects"</span><span class="punc">:</span> <span class="str">"████████ ██████ █████"</span><span class="punc">,</span>
+  <span class="key">"access"</span><span class="punc">:</span> <span class="kw">"on-request"</span>
+<span class="punc">}</span></pre>
+            <a class="card__req" href="#contact" data-cursor="hover">$ request-access →</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EDUCATION (tree) ===================== -->
+    <section class="section edu" id="education" aria-labelledby="edu-h">
+      <div class="container">
+        <p class="cmd" data-reveal>
+          <span class="cmd__path">~/dixit-pambhar</span> <span class="cmd__sign">$</span>
+          <span class="cmd__text">tree <span class="flag">~/education</span></span>
+        </p>
+        <h2 class="sr-only" id="edu-h">Education</h2>
+
+        <pre class="tree" data-reveal><span class="tree__root">education/</span>
+<span class="tree__branch">├──</span> <span class="tree__dir">flutter-development-course/</span>   <span class="comment"># Creative Design &amp; Multimedia Institute · 2020–21</span>
+<span class="tree__branch">├──</span> <span class="tree__dir">bsc-science/</span>                  <span class="comment"># Navyug Science College · 2018–20 · dropout</span>
+<span class="tree__branch">└──</span> <span class="tree__dir">higher-secondary/</span>             <span class="comment"># Krishna Science School · 2016–18</span></pre>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section contact" id="contact" aria-labelledby="contact-h">
+      <div class="container">
+        <p class="cmd" data-reveal>
+          <span class="cmd__path">~/dixit-pambhar</span> <span class="cmd__sign">$</span>
+          <span class="cmd__text">./contact.sh <span class="flag">--init</span></span>
+        </p>
+
+        <div class="contact__grid">
+          <div class="contact__intro" data-reveal>
+            <h2 class="out-title" id="contact-h">let's build something <span class="hl">worth shipping.</span></h2>
+            <p class="out-lead">open to senior &amp; contract roles and ambitious product collaborations.</p>
+
+            <ul class="contact__chan">
+              <li><span class="contact__k">email</span><a href="mailto:dixitpambhar9232@gmail.com" data-cursor="hover">dixitpambhar9232@gmail.com</a></li>
+              <li><span class="contact__k">phone</span><a href="tel:+919510261318" data-cursor="hover">+91 95102 61318</a></li>
+              <li><span class="contact__k">loc</span><span>surat, gujarat · india</span></li>
+            </ul>
+            <div class="contact__social">
+              <a href="https://www.linkedin.com/" target="_blank" rel="noopener" data-cursor="hover">[ linkedin ]</a>
+              <a href="https://github.com/" target="_blank" rel="noopener" data-cursor="hover">[ github ]</a>
+            </div>
+          </div>
+
+          <form class="contact__form" id="contactForm" novalidate data-reveal>
+            <div class="ifield">
+              <label for="cf-name">&gt; name</label>
+              <input type="text" id="cf-name" name="name" required autocomplete="name" placeholder="your name" data-cursor="text" />
+              <small data-error></small>
+            </div>
+            <div class="ifield">
+              <label for="cf-email">&gt; email</label>
+              <input type="email" id="cf-email" name="email" required autocomplete="email" placeholder="you@domain.com" data-cursor="text" />
+              <small data-error></small>
+            </div>
+            <div class="ifield">
+              <label for="cf-subject">&gt; subject <span class="comment"># optional</span></label>
+              <input type="text" id="cf-subject" name="subject" placeholder="re: ..." data-cursor="text" />
+            </div>
+            <div class="ifield">
+              <label for="cf-message">&gt; message</label>
+              <textarea id="cf-message" name="message" rows="4" required placeholder="tell me about your project" data-cursor="text"></textarea>
+              <small data-error></small>
+            </div>
+            <button class="run run--solid run--block" type="submit" data-cursor="hover">
+              <span class="run__sign">$</span> <span class="run__label">./send-message</span>
+              <span class="run__spin" aria-hidden="true"></span>
+            </button>
+            <p class="contact__status" data-form-status role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== STATUS BAR ===================== -->
+  <footer class="status" id="status">
+    <div class="status__left">
+      <span class="status__mode">NORMAL</span>
+      <span class="status__path" data-status-section>~/hero</span>
+    </div>
+    <div class="status__center">
+      <span>© <span data-year>2026</span> dixit pambhar</span>
+    </div>
+    <div class="status__right">
+      <button class="status__btn" id="backTop" data-cursor="hover">top ↑</button>
+      <span class="status__clock" data-clock>--:--:--</span>
+      <span class="status__git">main*</span>
+    </div>
+  </footer>
+
+  <!-- ===================== INTERACTIVE TERMINAL ===================== -->
+  <div class="term" id="term" aria-hidden="true">
+    <div class="term__backdrop" data-term-close></div>
+    <div class="term__win" role="dialog" aria-modal="true" aria-label="Interactive shell">
+      <div class="term__titlebar">
+        <span class="term__lights" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="term__title">dixit@portfolio: ~ — zsh</span>
+        <button class="term__close" id="termClose" data-term-close aria-label="Close terminal (Esc)">esc ✕</button>
+      </div>
+      <div class="term__screen" id="termScreen" tabindex="-1">
+        <div class="term__output" id="termOut"></div>
+        <label class="term__prompt" for="termInput">
+          <span class="term__ps1"><span class="term__ps1-path">~/dixit-pambhar</span> <span class="term__ps1-sign">$</span></span>
+          <input class="term__input" id="termInput" type="text" autocomplete="off" autocapitalize="off"
+                 autocorrect="off" spellcheck="false" aria-label="Type a command, e.g. help" />
+          <span class="term__caret" aria-hidden="true"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+  <canvas class="matrix" id="matrix" aria-hidden="true"></canvas>
+
+  <!-- ===================== SCRIPTS ===================== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+
+  <script src="js/utils.js" defer></script>
+  <script src="js/boot.js" defer></script>
+  <script src="js/cursor.js" defer></script>
+  <script src="js/navigation.js" defer></script>
+  <script src="js/typewriter.js" defer></script>
+  <script src="js/skills.js" defer></script>
+  <script src="js/projects.js" defer></script>
+  <script src="js/contact.js" defer></script>
+  <script src="js/terminal.js" defer></script>
+  <script src="js/animations.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+/* ============================================================
+   DESIGN TOKENS — terminal / developer console aesthetic
+   phosphor-green + amber on near-black · monospace system
+   ============================================================ */
+
+:root {
+  /* ---- Surfaces (green-tinted black ramp) ---- */
+  --bg:        #080b09;
+  --bg-2:      #0b100d;
+  --panel:     #0e1411;
+  --surface:   #111814;
+  --surface-2: #16201b;
+  --surface-hi:#1c2922;
+
+  /* ---- Lines ---- */
+  --line:        rgba(120, 240, 170, 0.10);
+  --line-strong: rgba(120, 240, 170, 0.20);
+  --line-dim:    rgba(180, 220, 190, 0.06);
+
+  /* ---- Text ---- */
+  --text:       #cfe9d6;  /* soft phosphor          */
+  --text-2:     #a7c4af;
+  --text-dim:   #6f8779;  /* comments / captions    */
+  --text-faint: #45524a;
+
+  /* ---- Terminal palette (used like syntax highlighting) ---- */
+  --green:        #4ef08a;  /* prompt / primary accent */
+  --green-bright: #86ffb4;
+  --green-deep:   #1f9b5a;
+  --amber:        #ffb454;  /* strings / values        */
+  --amber-soft:   #f0c987;
+  --cyan:         #5fd7e0;  /* keys                     */
+  --violet:       #c4a6ff;  /* numbers / booleans       */
+  --red:          #ff7a6b;  /* errors                   */
+  --magenta:      #ff8ad1;
+
+  /* ---- Semantic aliases ---- */
+  --accent: var(--green);
+  --accent-2: var(--amber);
+
+  /* ---- Glow ---- */
+  --glow-green: 0 0 12px rgba(78, 240, 138, 0.45);
+  --glow-amber: 0 0 12px rgba(255, 180, 84, 0.4);
+  --shadow-panel: 0 18px 50px -24px rgba(0, 0, 0, 0.85);
+
+  /* ---- 8-point spatial system ---- */
+  --space-1: 0.25rem;  --space-2: 0.5rem;   --space-3: 0.75rem;
+  --space-4: 1rem;     --space-5: 1.5rem;   --space-6: 2rem;
+  --space-7: 2.5rem;   --space-8: 3rem;     --space-9: 4rem;
+  --space-10: 5rem;    --space-11: 6rem;    --space-12: 8rem;
+
+  /* ---- Type scale (monospace, fluid) ---- */
+  --fs-50:  clamp(0.7rem, 0.68rem + 0.1vw, 0.78rem);
+  --fs-100: clamp(0.8rem, 0.78rem + 0.12vw, 0.875rem);
+  --fs-200: clamp(0.9rem, 0.86rem + 0.18vw, 1rem);
+  --fs-300: clamp(1.05rem, 0.98rem + 0.3vw, 1.25rem);
+  --fs-400: clamp(1.3rem, 1.1rem + 0.7vw, 1.75rem);
+  --fs-500: clamp(1.7rem, 1.3rem + 1.4vw, 2.6rem);
+  --fs-600: clamp(2.2rem, 1.6rem + 2.4vw, 3.75rem);
+  --fs-700: clamp(2.8rem, 1.8rem + 4.6vw, 6rem);
+
+  /* ---- Fonts ---- */
+  --mono: "JetBrains Mono", ui-monospace, "SF Mono", "Cascadia Code", Menlo, monospace;
+  --tracking-wide: 0.06em;
+  --tracking-mega: 0.18em;
+  --leading-tight: 1.1;
+  --leading-normal: 1.65;
+
+  /* ---- Radii (terminals are mostly square; tiny radius) ---- */
+  --r-sm: 4px;
+  --r-md: 6px;
+  --r-lg: 10px;
+
+  /* ---- Motion ---- */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 0.18s;
+  --dur-med: 0.4s;
+  --dur-slow: 0.8s;
+
+  /* ---- Layout ---- */
+  --container: 1180px;
+  --gutter: clamp(1rem, 4vw, 2.5rem);
+  --bar-h: 44px;        /* top tab bar  */
+  --status-h: 30px;     /* bottom status bar */
+  --z-status: 800;
+  --z-bar: 850;
+  --z-overlay: 1000;
+  --z-boot: 2000;
+  --z-cursor: 9999;
+}

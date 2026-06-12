@@ -1,0 +1,162 @@
+/* ============================================================
+   BASE — reset, terminal canvas, CRT layers, primitives
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-stopped { overflow: hidden; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: var(--fs-200);
+  line-height: var(--leading-normal);
+  font-weight: 400;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  font-variant-ligatures: contextual;
+  padding-top: var(--bar-h);
+  padding-bottom: var(--status-h);
+}
+
+/* Ambient phosphor glow + vignette */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background:
+    radial-gradient(1000px 700px at 50% -10%, rgba(78, 240, 138, 0.06), transparent 60%),
+    radial-gradient(120% 120% at 50% 50%, transparent 55%, rgba(0, 0, 0, 0.55) 100%);
+}
+
+/* CRT scanlines + flicker (toggleable via body.crt) */
+.crt-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 700;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--dur-med) ease;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0) 0px,
+      rgba(0, 0, 0, 0) 2px,
+      rgba(0, 0, 0, 0.16) 3px,
+      rgba(0, 0, 0, 0) 4px
+    );
+  mix-blend-mode: multiply;
+}
+body.crt .crt-overlay { opacity: 1; animation: crt-flicker 5s steps(60) infinite; }
+@keyframes crt-flicker {
+  0%, 96%, 100% { opacity: 1; }
+  97% { opacity: 0.82; }
+  98% { opacity: 0.96; }
+}
+
+img, svg, video { display: block; max-width: 100%; }
+button, input, textarea, select { font: inherit; color: inherit; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+
+:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+}
+::selection { background: var(--green); color: var(--bg); }
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--surface-hi); border: 2px solid var(--bg); }
+::-webkit-scrollbar-thumb:hover { background: var(--green-deep); }
+
+/* ---- Layout primitives ---- */
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.section { position: relative; padding-block: clamp(3.5rem, 8vw, 7rem); scroll-margin-top: calc(var(--bar-h) + 12px); }
+
+/* ---- Common terminal bits ---- */
+.prompt { color: var(--green); }
+.prompt::before { content: "~/dixit-pambhar $ "; color: var(--text-dim); }
+.flag { color: var(--amber); }
+.comment { color: var(--text-dim); }
+.str { color: var(--amber); }
+.key { color: var(--cyan); }
+.num { color: var(--violet); }
+.kw  { color: var(--magenta); }
+.punc { color: var(--text-dim); }
+
+/* command line that introduces each section */
+.cmd {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5ch;
+  font-size: var(--fs-200);
+  margin-bottom: var(--space-6);
+}
+.cmd__path { color: var(--text-dim); }
+.cmd__sign { color: var(--green); }
+.cmd__text { color: var(--text); }
+.cmd__text b { color: var(--green-bright); font-weight: 700; }
+
+/* blinking block caret */
+.caret {
+  display: inline-block;
+  width: 0.6ch;
+  height: 1.05em;
+  margin-left: 0.15ch;
+  background: var(--green);
+  translate: 0 0.15em;
+  animation: blink 1.05s steps(1) infinite;
+}
+@keyframes blink { 0%, 50% { opacity: 1; } 50.01%, 100% { opacity: 0; } }
+
+/* section heading (output title) */
+.out-title {
+  font-size: var(--fs-500);
+  font-weight: 700;
+  line-height: var(--leading-tight);
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+.out-title .hl { color: var(--green); }
+.out-lead { color: var(--text-dim); max-width: 64ch; margin-top: var(--space-3); }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+.skip-link {
+  position: fixed; top: 8px; left: 8px; z-index: var(--z-boot);
+  padding: 8px 14px; background: var(--green); color: var(--bg);
+  font-weight: 700; border-radius: var(--r-sm);
+  transform: translateY(-200%); transition: transform var(--dur-fast) var(--ease-out);
+}
+.skip-link:focus { transform: none; }
+
+/* reveal: lines "print" upward (JS-only) */
+.js [data-reveal] {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
+}
+.js [data-reveal].is-in { opacity: 1; transform: none; }
+.no-js .boot, .no-js .cursor { display: none !important; }
