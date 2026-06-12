@@ -9,16 +9,31 @@
   <title>dixit pambhar — senior flutter & full-stack developer</title>
   <meta name="description" content="Dixit Pambhar — Senior Flutter & Full-Stack Developer. 5+ years building cross-platform apps & resilient backends in Dart, Flutter, React, Node.js, Python & Laravel." />
   <meta name="author" content="Dixit Pambhar" />
+  <meta name="keywords" content="Dixit Pambhar, Flutter developer, full-stack developer, Dart, Flutter, React, Node.js, Python, Laravel, mobile app developer, Surat, India, remote developer" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
   <link rel="canonical" href="https://dixitpambhar.dev/" />
 
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="dixit pambhar — portfolio" />
+  <meta property="og:locale" content="en_US" />
   <meta property="og:title" content="dixit pambhar — senior flutter & full-stack developer" />
   <meta property="og:description" content="5+ years building scalable applications across mobile and web. dart · flutter · react · node · python · laravel" />
   <meta property="og:url" content="https://dixitpambhar.dev/" />
-  <meta property="og:image" content="assets/og-cover.svg" />
+  <meta property="og:image" content="https://dixitpambhar.dev/assets/og-cover.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Terminal window reading: dixit_pambhar — senior flutter & full-stack developer" />
+
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="dixit pambhar — senior flutter & full-stack developer" />
+  <meta name="twitter:description" content="5+ years building scalable applications across mobile and web. dart · flutter · react · node · python · laravel" />
+  <meta name="twitter:image" content="https://dixitpambhar.dev/assets/og-cover.png" />
+  <meta name="twitter:image:alt" content="Terminal window reading: dixit_pambhar — senior flutter & full-stack developer" />
 
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,14 +53,42 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Dixit Pambhar",
-    "jobTitle": "Senior Flutter & Full-Stack Developer",
-    "email": "mailto:dixitpambhar9232@gmail.com",
-    "telephone": "+91-95102-61318",
-    "address": { "@type": "PostalAddress", "addressLocality": "Surat", "addressRegion": "Gujarat", "addressCountry": "IN" },
-    "url": "https://dixitpambhar.dev/",
-    "knowsAbout": ["Flutter","Dart","React.js","Node.js","Python","Laravel","Firebase","GraphQL","Cross-platform mobile development"]
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://dixitpambhar.dev/#person",
+        "name": "Dixit Pambhar",
+        "jobTitle": "Senior Flutter & Full-Stack Developer",
+        "email": "mailto:dixitpambhar9232@gmail.com",
+        "telephone": "+91-95102-61318",
+        "address": { "@type": "PostalAddress", "addressLocality": "Surat", "addressRegion": "Gujarat", "addressCountry": "IN" },
+        "url": "https://dixitpambhar.dev/",
+        "image": "https://dixitpambhar.dev/assets/og-cover.png",
+        "sameAs": [
+          "https://github.com/dixit9232"
+        ],
+        "worksFor": { "@type": "Organization", "name": "DecodeUp (P) Limited" },
+        "knowsAbout": ["Flutter","Dart","React.js","Node.js","Python","Laravel","Firebase","GraphQL","Cross-platform mobile development"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://dixitpambhar.dev/#website",
+        "url": "https://dixitpambhar.dev/",
+        "name": "dixit pambhar — portfolio",
+        "description": "Portfolio of Dixit Pambhar, Senior Flutter & Full-Stack Developer.",
+        "inLanguage": "en",
+        "publisher": { "@id": "https://dixitpambhar.dev/#person" }
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": "https://dixitpambhar.dev/#profilepage",
+        "url": "https://dixitpambhar.dev/",
+        "name": "dixit pambhar — senior flutter & full-stack developer",
+        "isPartOf": { "@id": "https://dixitpambhar.dev/#website" },
+        "mainEntity": { "@id": "https://dixitpambhar.dev/#person" },
+        "primaryImageOfPage": "https://dixitpambhar.dev/assets/og-cover.png"
+      }
+    ]
   }
   </script>
 </head>
@@ -69,7 +112,18 @@
 
   <!-- ============ TOP BAR (window chrome + nav) ============ -->
   <header class="bar" id="bar">
-    <div class="bar__lights" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div class="bar__lights wc" role="group" aria-label="Window controls">
+      <button class="wc__btn wc__btn--close" id="winClose" aria-label="Close window" title="Close" data-cursor="dot">
+        <svg class="wc__ic" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M3.5 3.5l5 5M8.5 3.5l-5 5"/></svg>
+      </button>
+      <button class="wc__btn wc__btn--min" id="winMin" aria-label="Minimize window" title="Minimize" data-cursor="dot">
+        <svg class="wc__ic" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 6h7"/></svg>
+      </button>
+      <button class="wc__btn wc__btn--max" id="winMax" aria-label="Maximize window" title="Maximize" data-cursor="dot">
+        <svg class="wc__ic wc__ic--zoom" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M3 3h4.4L3 7.4Z"/><path d="M9 9H4.6L9 4.6Z"/></svg>
+        <svg class="wc__ic wc__ic--unzoom" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M5.4 5.4V1.6L1.6 5.4Z"/><path d="M6.6 6.6v3.8l3.8-3.8Z"/></svg>
+      </button>
+    </div>
     <a class="bar__path" href="#hero" data-cursor="hover">
       <span class="bar__user">dixit</span><span class="bar__at">@</span><span class="bar__host">portfolio</span>:<span class="bar__cwd">~</span>
     </a>
@@ -206,66 +260,8 @@
         </p>
         <h2 class="sr-only" id="log-h">Work experience</h2>
 
-        <ol class="commits">
-          <li class="commit" data-reveal>
-            <div class="commit__graph" aria-hidden="true"><span class="commit__node"></span></div>
-            <div class="commit__body">
-              <p class="commit__head">
-                <span class="commit__hash">a1f0c2e</span>
-                <span class="commit__ref">(HEAD → main)</span>
-                <span class="commit__date">Jan 2026 — present</span>
-              </p>
-              <h3 class="commit__title">Senior Flutter Developer <span class="commit__type">· contract</span></h3>
-              <p class="commit__org">DecodeUp (P) Limited <span class="comment"># surat, gujarat</span></p>
-              <ul class="commit__points">
-                <li>leading flutter application development across client projects</li>
-                <li>designing scalable architectures &amp; maintaining code-quality standards</li>
-                <li>partnering with stakeholders to deliver reliable, high-performing solutions</li>
-                <li>reviewing code, optimizing performance, supporting successful releases</li>
-              </ul>
-              <p class="commit__tags"><span>flutter</span><span>architecture</span><span>code-review</span><span>leadership</span></p>
-            </div>
-          </li>
-
-          <li class="commit" data-reveal>
-            <div class="commit__graph" aria-hidden="true"><span class="commit__node"></span></div>
-            <div class="commit__body">
-              <p class="commit__head">
-                <span class="commit__hash">9c4be71</span>
-                <span class="commit__date">Nov 2021 — Jan 2026</span>
-              </p>
-              <h3 class="commit__title">Senior Flutter &amp; Full-Stack Developer</h3>
-              <p class="commit__org">Anantkaal LLP <span class="comment"># surat, gujarat</span></p>
-              <ul class="commit__points">
-                <li>developed &amp; launched cross-platform mobile apps with flutter</li>
-                <li>built backend services and APIs using node.js, python &amp; laravel</li>
-                <li>integrated firebase, payment gateways and third-party services</li>
-                <li>worked directly with clients and mentored junior developers</li>
-              </ul>
-              <p class="commit__tags"><span>flutter</span><span>node.js</span><span>python</span><span>laravel</span><span>firebase</span><span>mentoring</span></p>
-            </div>
-          </li>
-
-          <li class="commit" data-reveal>
-            <div class="commit__graph" aria-hidden="true"><span class="commit__node"></span></div>
-            <div class="commit__body">
-              <p class="commit__head">
-                <span class="commit__hash">3e8a05d</span>
-                <span class="commit__ref">(initial commit)</span>
-                <span class="commit__date">May 2021 — Nov 2021</span>
-              </p>
-              <h3 class="commit__title">Flutter Developer Intern <span class="commit__type">· remote</span></h3>
-              <p class="commit__org">Shubhchintak Technology Pvt. Ltd. <span class="comment"># mumbai</span></p>
-              <ul class="commit__points">
-                <li>assisted in developing flutter apps and implementing UI features</li>
-                <li>integrated APIs and firebase services for app functionality</li>
-                <li>performed testing, bug fixing and continuous improvements</li>
-                <li>collaborated through git and code-review practices</li>
-              </ul>
-              <p class="commit__tags"><span>flutter</span><span>rest-api</span><span>firebase</span><span>git</span></p>
-            </div>
-          </li>
-        </ol>
+        <!-- rendered from data/profile.json (experience) by js/content.js -->
+        <ol class="commits" data-experience></ol>
       </div>
     </section>
 
@@ -278,60 +274,8 @@
         </p>
         <h2 class="sr-only" id="skills-h">Skills</h2>
 
-        <div class="skills__grid">
-          <article class="skl" data-reveal>
-            <h3 class="skl__head">mobile/ <span class="comment"># core specialization</span></h3>
-            <ul class="skl__list">
-              <li data-skill data-level="96"><span class="skl__name">dart · flutter</span><span class="skl__bar"><i></i></span><span class="skl__lvl">expert</span></li>
-              <li data-skill data-level="90"><span class="skl__name">riverpod · bloc · getx</span><span class="skl__bar"><i></i></span><span class="skl__lvl">expert</span></li>
-              <li data-skill data-level="82"><span class="skl__name">kotlin · java · mvvm</span><span class="skl__bar"><i></i></span><span class="skl__lvl">advanced</span></li>
-            </ul>
-          </article>
-
-          <article class="skl" data-reveal>
-            <h3 class="skl__head">frontend/</h3>
-            <ul class="skl__list">
-              <li data-skill data-level="92"><span class="skl__name">javascript · typescript</span><span class="skl__bar"><i></i></span><span class="skl__lvl">expert</span></li>
-              <li data-skill data-level="88"><span class="skl__name">react · next.js</span><span class="skl__bar"><i></i></span><span class="skl__lvl">advanced</span></li>
-              <li data-skill data-level="80"><span class="skl__name">redux · tanstack · tailwind</span><span class="skl__bar"><i></i></span><span class="skl__lvl">advanced</span></li>
-            </ul>
-          </article>
-
-          <article class="skl" data-reveal>
-            <h3 class="skl__head">backend/</h3>
-            <ul class="skl__list">
-              <li data-skill data-level="90"><span class="skl__name">node · express</span><span class="skl__bar"><i></i></span><span class="skl__lvl">expert</span></li>
-              <li data-skill data-level="86"><span class="skl__name">python · fastapi · flask</span><span class="skl__bar"><i></i></span><span class="skl__lvl">advanced</span></li>
-              <li data-skill data-level="84"><span class="skl__name">laravel · graphql · socket.io</span><span class="skl__bar"><i></i></span><span class="skl__lvl">advanced</span></li>
-            </ul>
-          </article>
-
-          <article class="skl" data-reveal>
-            <h3 class="skl__head">data_&amp;_cloud/</h3>
-            <ul class="skl__list">
-              <li data-skill data-level="90"><span class="skl__name">firebase · supabase</span><span class="skl__bar"><i></i></span><span class="skl__lvl">expert</span></li>
-              <li data-skill data-level="82"><span class="skl__name">mongodb · mysql · postgres</span><span class="skl__bar"><i></i></span><span class="skl__lvl">advanced</span></li>
-              <li data-skill data-level="74"><span class="skl__name">aws · cloudflare</span><span class="skl__bar"><i></i></span><span class="skl__lvl">proficient</span></li>
-            </ul>
-          </article>
-
-          <article class="skl" data-reveal>
-            <h3 class="skl__head">tooling/</h3>
-            <ul class="skl__list">
-              <li data-skill data-level="92"><span class="skl__name">git · ci/cd</span><span class="skl__bar"><i></i></span><span class="skl__lvl">expert</span></li>
-              <li data-skill data-level="84"><span class="skl__name">unit testing · postman</span><span class="skl__bar"><i></i></span><span class="skl__lvl">advanced</span></li>
-              <li data-skill data-level="80"><span class="skl__name">figma · webhooks</span><span class="skl__bar"><i></i></span><span class="skl__lvl">advanced</span></li>
-            </ul>
-          </article>
-
-          <article class="skl skl--note" data-reveal>
-            <h3 class="skl__head">$ echo $STACK</h3>
-            <p class="skl__note">
-              full-stack by habit, mobile-first by heart. I pick the boring, reliable
-              tool when it ships faster — and reach for the sharp one when it matters.
-            </p>
-          </article>
-        </div>
+        <!-- rendered from data/profile.json (skills) by js/content.js -->
+        <div class="skills__grid" data-skills></div>
       </div>
     </section>
 
@@ -439,16 +383,6 @@
 <span class="punc">}</span></pre>
           </article>
 
-          <article class="card card--locked" data-cat="all" data-reveal data-cursor="hover">
-            <div class="card__bar"><span class="card__file">*.nda</span><span class="card__meta">restricted</span></div>
-            <pre class="card__code"><span class="comment"># permission denied (NDA)</span>
-<span class="punc">{</span>
-  <span class="key">"projects"</span><span class="punc">:</span> <span class="str">"████████ ██████ █████"</span><span class="punc">,</span>
-  <span class="key">"access"</span><span class="punc">:</span> <span class="kw">"on-request"</span>
-<span class="punc">}</span></pre>
-            <a class="card__req" href="#contact" data-cursor="hover">$ request-access →</a>
-          </article>
-
         </div>
       </div>
     </section>
@@ -462,10 +396,8 @@
         </p>
         <h2 class="sr-only" id="edu-h">Education</h2>
 
-        <pre class="tree" data-reveal><span class="tree__root">education/</span>
-<span class="tree__branch">├──</span> <span class="tree__dir">flutter-development-course/</span>   <span class="comment"># Creative Design &amp; Multimedia Institute · 2020–21</span>
-<span class="tree__branch">├──</span> <span class="tree__dir">bsc-science/</span>                  <span class="comment"># Navyug Science College · 2018–20 · dropout</span>
-<span class="tree__branch">└──</span> <span class="tree__dir">higher-secondary/</span>             <span class="comment"># Krishna Science School · 2016–18</span></pre>
+        <!-- rendered from data/profile.json (education) by js/content.js -->
+        <pre class="tree" data-reveal data-education></pre>
       </div>
     </section>
 
@@ -489,7 +421,7 @@
             </ul>
             <div class="contact__social">
               <a href="https://www.linkedin.com/" target="_blank" rel="noopener" data-cursor="hover">[ linkedin ]</a>
-              <a href="https://github.com/" target="_blank" rel="noopener" data-cursor="hover">[ github ]</a>
+              <a href="https://github.com/dixit9232" target="_blank" rel="noopener" data-cursor="hover">[ github ]</a>
             </div>
           </div>
 
@@ -545,9 +477,20 @@
     <div class="term__backdrop" data-term-close></div>
     <div class="term__win" role="dialog" aria-modal="true" aria-label="Interactive shell">
       <div class="term__titlebar">
-        <span class="term__lights" aria-hidden="true"><i></i><i></i><i></i></span>
+        <div class="term__lights wc" role="group" aria-label="Terminal window controls">
+          <button class="wc__btn wc__btn--close" data-term-close aria-label="Close terminal" title="Close" data-cursor="dot">
+            <svg class="wc__ic" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M3.5 3.5l5 5M8.5 3.5l-5 5"/></svg>
+          </button>
+          <button class="wc__btn wc__btn--min" id="termMin" aria-label="Minimize terminal" title="Minimize" data-cursor="dot">
+            <svg class="wc__ic" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 6h7"/></svg>
+          </button>
+          <button class="wc__btn wc__btn--max" id="termMax" aria-label="Maximize terminal" title="Maximize" data-cursor="dot">
+            <svg class="wc__ic wc__ic--zoom" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M3 3h4.4L3 7.4Z"/><path d="M9 9H4.6L9 4.6Z"/></svg>
+            <svg class="wc__ic wc__ic--unzoom" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M5.4 5.4V1.6L1.6 5.4Z"/><path d="M6.6 6.6v3.8l3.8-3.8Z"/></svg>
+          </button>
+        </div>
         <span class="term__title">dixit@portfolio: ~ — zsh</span>
-        <button class="term__close" id="termClose" data-term-close aria-label="Close terminal (Esc)">esc ✕</button>
+        <span class="term__spacer" aria-hidden="true"></span>
       </div>
       <div class="term__screen" id="termScreen" tabindex="-1">
         <div class="term__output" id="termOut"></div>
@@ -562,12 +505,26 @@
   </div>
   <canvas class="matrix" id="matrix" aria-hidden="true"></canvas>
 
+  <!-- ===================== DOCK (minimized windows) ===================== -->
+  <div class="dock" id="dock" aria-hidden="true" aria-label="Minimized windows"></div>
+
+  <!-- ===================== SHUTDOWN OVERLAY ===================== -->
+  <div class="shutdown" id="shutdown" aria-hidden="true" role="dialog" aria-label="Session closed">
+    <div class="shutdown__inner">
+      <pre class="shutdown__log" id="shutdownLog"></pre>
+      <button class="run run--solid shutdown__btn" id="rebootBtn" data-cursor="hover"><span class="run__sign">$</span> reboot</button>
+      <p class="shutdown__hint">press <kbd>enter</kbd> to reboot · <kbd>esc</kbd> to cancel</p>
+    </div>
+  </div>
+
   <!-- ===================== SCRIPTS ===================== -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
 
   <script src="js/utils.js" defer></script>
+  <script src="js/content.js" defer></script>
+  <script src="js/sound.js" defer></script>
   <script src="js/boot.js" defer></script>
   <script src="js/cursor.js" defer></script>
   <script src="js/navigation.js" defer></script>
@@ -575,6 +532,7 @@
   <script src="js/skills.js" defer></script>
   <script src="js/projects.js" defer></script>
   <script src="js/contact.js" defer></script>
+  <script src="js/windowctl.js" defer></script>
   <script src="js/terminal.js" defer></script>
   <script src="js/animations.js" defer></script>
   <script src="js/main.js" defer></script>

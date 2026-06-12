@@ -66,7 +66,7 @@
 
 /* ---- Print ---- */
 @media print {
-  .bar, .status, .drawer, .cursor, .boot, .crt-overlay,
+  .bar, .status, .drawer, .cursor, .boot, .crt-overlay, .dock, .shutdown,
   .work__filters, .contact__form, .hero__cta { display: none !important; }
   body { background: #fff; color: #111; padding: 0; }
   body::before { display: none; }

@@ -181,10 +181,6 @@
   color: var(--text-2);
   overflow-x: auto;
 }
-.card--locked .card__code { color: var(--text-dim); }
-.card__req { display: inline-block; padding: 0 var(--space-5) var(--space-4); color: var(--amber); font-size: var(--fs-100); }
-.card__req:hover { color: var(--amber-soft); }
-
 /* ---------------- Education (tree) ---------------- */
 .tree {
   font-family: var(--mono);

@@ -1,0 +1,13 @@
+{
+  "name": "dixit pambhar — portfolio",
+  "short_name": "dixit_pambhar",
+  "description": "Portfolio of Dixit Pambhar, Senior Flutter & Full-Stack Developer.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#080b09",
+  "theme_color": "#080b09",
+  "icons": [
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

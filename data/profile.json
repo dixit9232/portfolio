@@ -1,0 +1,119 @@
+{
+  "experience": [
+    {
+      "hash": "a1f0c2e",
+      "ref": "(HEAD → main)",
+      "date": "Jan 2026 — present",
+      "title": "Senior Flutter Developer",
+      "type": "contract",
+      "org": "DecodeUp (P) Limited",
+      "location": "surat, gujarat",
+      "points": [
+        "leading flutter application development across client projects",
+        "designing scalable architectures & maintaining code-quality standards",
+        "partnering with stakeholders to deliver reliable, high-performing solutions",
+        "reviewing code, optimizing performance, supporting successful releases"
+      ],
+      "tags": ["flutter", "architecture", "code-review", "leadership"]
+    },
+    {
+      "hash": "9c4be71",
+      "date": "Nov 2021 — Jan 2026",
+      "title": "Senior Flutter & Full-Stack Developer",
+      "org": "Anantkaal LLP",
+      "location": "surat, gujarat",
+      "points": [
+        "developed & launched cross-platform mobile apps with flutter",
+        "built backend services and APIs using node.js, python & laravel",
+        "integrated firebase, payment gateways and third-party services",
+        "worked directly with clients and mentored junior developers"
+      ],
+      "tags": ["flutter", "node.js", "python", "laravel", "firebase", "mentoring"]
+    },
+    {
+      "hash": "3e8a05d",
+      "ref": "(initial commit)",
+      "date": "May 2021 — Nov 2021",
+      "title": "Flutter Developer Intern",
+      "type": "remote",
+      "org": "Shubhchintak Technology Pvt. Ltd.",
+      "location": "mumbai",
+      "points": [
+        "assisted in developing flutter apps and implementing UI features",
+        "integrated APIs and firebase services for app functionality",
+        "performed testing, bug fixing and continuous improvements",
+        "collaborated through git and code-review practices"
+      ],
+      "tags": ["flutter", "rest-api", "firebase", "git"]
+    }
+  ],
+
+  "skills": {
+    "domains": [
+      {
+        "name": "mobile/",
+        "comment": "core specialization",
+        "items": [
+          { "name": "dart · flutter", "level": 96, "label": "expert" },
+          { "name": "riverpod · bloc · getx", "level": 90, "label": "expert" },
+          { "name": "kotlin · java · mvvm", "level": 82, "label": "advanced" }
+        ]
+      },
+      {
+        "name": "frontend/",
+        "items": [
+          { "name": "javascript · typescript", "level": 92, "label": "expert" },
+          { "name": "react · next.js", "level": 88, "label": "advanced" },
+          { "name": "redux · tanstack · tailwind", "level": 80, "label": "advanced" }
+        ]
+      },
+      {
+        "name": "backend/",
+        "items": [
+          { "name": "node · express", "level": 90, "label": "expert" },
+          { "name": "python · fastapi · flask", "level": 86, "label": "advanced" },
+          { "name": "laravel · graphql · socket.io", "level": 84, "label": "advanced" }
+        ]
+      },
+      {
+        "name": "data_&_cloud/",
+        "items": [
+          { "name": "firebase · supabase", "level": 90, "label": "expert" },
+          { "name": "mongodb · mysql · postgres", "level": 82, "label": "advanced" },
+          { "name": "aws · cloudflare", "level": 74, "label": "proficient" }
+        ]
+      },
+      {
+        "name": "tooling/",
+        "items": [
+          { "name": "git · ci/cd", "level": 92, "label": "expert" },
+          { "name": "unit testing · postman", "level": 84, "label": "advanced" },
+          { "name": "figma · webhooks", "level": 80, "label": "advanced" }
+        ]
+      }
+    ],
+    "note": {
+      "head": "$ echo $STACK",
+      "text": "full-stack by habit, mobile-first by heart. I pick the boring, reliable tool when it ships faster — and reach for the sharp one when it matters."
+    }
+  },
+
+  "education": [
+    {
+      "name": "flutter-development-course",
+      "institution": "Creative Design & Multimedia Institute",
+      "period": "2020–21"
+    },
+    {
+      "name": "bsc-science",
+      "institution": "Navyug Science College",
+      "period": "2018–20",
+      "note": "dropout"
+    },
+    {
+      "name": "higher-secondary",
+      "institution": "Krishna Science School",
+      "period": "2016–18"
+    }
+  ]
+}

@@ -17,6 +17,8 @@
       }
       el.textContent = "";
       let i = 0;
+      /* silent on purpose: auto-typed text shouldn't click — keyboard
+         sfx are reserved for the user's own keystrokes in the shell */
       (function tick() {
         if (i <= text.length) {
           el.textContent = text.slice(0, i);

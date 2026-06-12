@@ -40,8 +40,9 @@
     document.addEventListener("mouseenter", () => cursor.classList.add("is-active"));
 
     function setState(kind) {
-      cursor.classList.remove("is-hover", "is-text");
+      cursor.classList.remove("is-hover", "is-text", "is-dot");
       if (kind === "text") cursor.classList.add("is-text");
+      else if (kind === "dot") cursor.classList.add("is-dot");
       else if (kind) cursor.classList.add("is-hover");
     }
     document.addEventListener("mouseover", (e) => {

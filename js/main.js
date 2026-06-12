@@ -70,8 +70,9 @@
       else window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
     });
 
-  /* run modules */
-  App.boot();
+  /* run modules — after profile data is loaded (content.js), so
+     section renderers finish before observers query the DOM */
+  Promise.resolve(App.dataReady).then(() => App.boot());
 
   if (App.flags.hasGSAP && window.ScrollTrigger) {
     window.addEventListener("load", () => window.ScrollTrigger.refresh());

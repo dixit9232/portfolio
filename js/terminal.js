@@ -66,6 +66,7 @@
           ["contact / resume", "get in touch / download CV"],
           ["goto &lt;section&gt;", "navigate the page"],
           ["crt", "toggle the CRT effect"],
+          ["sound [list|&lt;switch&gt;]", "toggle / pick typing sfx"],
           ["neofetch", "system info"],
           ["clear", "clear the screen"],
           ["exit", "close the shell"],
@@ -133,31 +134,33 @@
         });
       },
       skills() {
-        const rows = [
-          ["mobile", "dart · flutter · riverpod · bloc · getx · kotlin · java"],
-          ["frontend", "javascript · typescript · react · next · redux · tanstack · tailwind"],
-          ["backend", "node · express · python · laravel · fastapi · flask · graphql · socket.io"],
-          ["data/cloud", "firebase · supabase · mongo · mysql · postgres · aws · cloudflare"],
-          ["tooling", "git · ci/cd · unit-testing · postman · figma · webhooks"],
-        ];
-        rows.forEach(([k, v]) => print('<span class="cy">' + k.padEnd(11) + "</span> " + v));
+        const domains = App.data && App.data.skills && App.data.skills.domains;
+        if (!domains) return print('<span class="err">skills: data/profile.json not loaded</span>');
+        const pad = Math.max(...domains.map((d) => d.name.length)) + 2;
+        domains.forEach((d) => {
+          const all = d.items.map((it) => it.name).join(" · ");
+          print('<span class="cy">' + esc(d.name.padEnd(pad)) + "</span> " + esc(all));
+        });
       },
       experience() {
-        const jobs = [
-          ["a1f0c2e", "DecodeUp (P) Limited", "Senior Flutter Developer · contract", "Jan 2026 — present"],
-          ["9c4be71", "Anantkaal LLP", "Senior Flutter & Full-Stack Developer", "Nov 2021 — Jan 2026"],
-          ["3e8a05d", "Shubhchintak Technology", "Flutter Developer Intern · remote", "May 2021 — Nov 2021"],
-        ];
-        jobs.forEach(([h, org, role, date]) => {
-          print('<span class="amb">' + h + '</span> <span class="ok">' + role + "</span>");
-          print('         <span class="dim">' + org + " · " + date + "</span>");
+        const jobs = App.data && App.data.experience;
+        if (!jobs) return print('<span class="err">experience: data/profile.json not loaded</span>');
+        jobs.forEach((j) => {
+          const role = j.title + (j.type ? " · " + j.type : "");
+          print('<span class="amb">' + esc(j.hash) + '</span> <span class="ok">' + esc(role) + "</span>");
+          print('         <span class="dim">' + esc(j.org) + " · " + esc(j.date) + "</span>");
         });
       },
       education() {
+        const entries = App.data && App.data.education;
+        if (!entries) return print('<span class="err">education: data/profile.json not loaded</span>');
         print('<span class="cy">education/</span>');
-        print('<span class="dim">├──</span> <span class="ok">flutter-development-course/</span> <span class="dim"># CDMI · 2020–21</span>');
-        print('<span class="dim">├──</span> <span class="ok">bsc-science/</span>                <span class="dim"># Navyug · 2018–20 · dropout</span>');
-        print('<span class="dim">└──</span> <span class="ok">higher-secondary/</span>           <span class="dim"># Krishna · 2016–18</span>');
+        const pad = Math.max(...entries.map((e) => e.name.length)) + 3;
+        entries.forEach((e, i) => {
+          const branch = i === entries.length - 1 ? "└──" : "├──";
+          const meta = e.institution + " · " + e.period + (e.note ? " · " + e.note : "");
+          print('<span class="dim">' + branch + '</span> <span class="ok">' + esc((e.name + "/").padEnd(pad)) + '</span><span class="dim"># ' + esc(meta) + "</span>");
+        });
       },
       contact() {
         print('<span class="cy">email</span>  <a href="mailto:dixitpambhar9232@gmail.com">dixitpambhar9232@gmail.com</a>');
@@ -216,11 +219,32 @@
       vim() { print('<span class="dim">entering vim… just kidding. to exit vim irl: smash esc, pray, type :q!</span>'); },
       coffee() { print('<span class="amb">☕ brewing… HTTP 418: i\'m a teapot.</span>'); },
       sl() { print('<span class="amb">🚂💨  choo choo — you typed sl instead of ls, didn\'t you?</span>'); },
+      sound(args) {
+        if (!App.sound) { print('<span class="err">audio unavailable in this browser</span>'); return; }
+        const arg = (args[0] || "").toLowerCase();
+        if (!arg) {
+          const on = App.sound.toggle();
+          print('<span class="dim">typing sfx:</span> ' + (on ? '<span class="ok">on</span> <span class="dim">— switch: ' + App.sound.current() + ' · see <span class="ok">sound list</span></span>' : '<span class="err">off</span>'));
+          return;
+        }
+        if (arg === "list") {
+          App.sound.list().forEach((s) => {
+            const name = ((s.active ? "▸ " : "  ") + s.name).padEnd(12);
+            print((s.active ? '<span class="ok">' + name + "</span>" : name) + '<span class="dim">' + s.label + "</span>");
+          });
+          print('<span class="dim">choose with <span class="ok">sound &lt;name&gt;</span></span>');
+          return;
+        }
+        App.sound.use(arg).then((ok) => {
+          if (ok) print('<span class="dim">switch set →</span> <span class="ok">' + esc(arg) + "</span>");
+          else print('<span class="err">unknown switch: ' + esc(arg) + '</span> <span class="dim">— try <span class="ok">sound list</span></span>');
+        });
+      },
       matrix() { startMatrix(); },
       clear() { out.innerHTML = ""; },
       exit() { close(); },
     };
-    const ALIAS_CMD = { "?": "help", info: "neofetch", history: "experience", log: "experience", edu: "education", cv: "resume", download: "resume", links: "social", cls: "clear", quit: "exit", q: "exit", close: "exit", theme: "crt", cd: "goto", nano: "vim", emacs: "vim" };
+    const ALIAS_CMD = { "?": "help", info: "neofetch", history: "experience", log: "experience", edu: "education", cv: "resume", download: "resume", links: "social", cls: "clear", quit: "exit", q: "exit", close: "exit", theme: "crt", cd: "goto", nano: "vim", emacs: "vim", sfx: "sound", mute: "sound" };
 
     /* ---------- run ---------- */
     function run(raw) {
@@ -241,8 +265,10 @@
       gap();
     }
 
-    /* ---------- open / close ---------- */
+    /* ---------- open / close / minimize / maximize ---------- */
     function open() {
+      if (App.win && App.win.isMin()) App.win.restore();
+      if (term.classList.contains("is-min")) return restoreFromDock();
       if (term.classList.contains("is-open")) return input.focus();
       lastFocus = document.activeElement;
       term.classList.add("is-open");
@@ -257,15 +283,49 @@
       setTimeout(() => input.focus(), 80);
     }
     function close(after) {
-      term.classList.remove("is-open");
+      if (App.dock) App.dock.remove("term");
+      term.classList.remove("is-open", "is-min");
       term.setAttribute("aria-hidden", "true");
       if (App.lenis) App.lenis.start();
       if (lastFocus && lastFocus.focus) lastFocus.focus();
       if (typeof after === "function") setTimeout(after, 260);
     }
+    function minimize() {
+      if (!term.classList.contains("is-open") || term.classList.contains("is-min")) return;
+      term.classList.add("is-min");
+      term.setAttribute("aria-hidden", "true");
+      if (App.lenis) App.lenis.start();
+      const item = App.dock && App.dock.add("term", "zsh — portfolio.sh", restoreFromDock);
+      if (item) item.focus();
+    }
+    function restoreFromDock() {
+      if (App.dock) App.dock.remove("term");
+      term.classList.remove("is-min");
+      term.setAttribute("aria-hidden", "false");
+      if (App.lenis) App.lenis.stop();
+      setTimeout(() => input.focus(), 80);
+    }
+    function toggleMax() {
+      const zoomed = term.classList.toggle("is-max");
+      const lights = term.querySelector(".term__lights");
+      if (lights) lights.classList.toggle("is-zoomed", zoomed);
+      if (term.classList.contains("is-open") && !term.classList.contains("is-min")) input.focus();
+    }
 
     openers.forEach((b) => b && b.addEventListener("click", open));
     App.$$("[data-term-close]", term).forEach((b) => b.addEventListener("click", () => close()));
+    const btnMin = document.getElementById("termMin");
+    const btnMax = document.getElementById("termMax");
+    if (btnMin) btnMin.addEventListener("click", minimize);
+    if (btnMax) btnMax.addEventListener("click", toggleMax);
+
+    /* double-click on the titlebar background zooms, like macOS */
+    const titlebar = term.querySelector(".term__titlebar");
+    if (titlebar) {
+      titlebar.addEventListener("dblclick", (e) => {
+        if (!e.target.closest("button")) toggleMax();
+      });
+    }
 
     /* keep clicks inside the screen focusing the input */
     screen.addEventListener("click", (e) => {
@@ -273,7 +333,11 @@
     });
 
     /* ---------- input keys ---------- */
+    input.addEventListener("keyup", (e) => {
+      if (App.sound) App.sound.up(e);
+    });
     input.addEventListener("keydown", (e) => {
+      if (App.sound) App.sound.down(e);
       if (e.key === "Enter") {
         run(input.value);
         input.value = "";
@@ -298,15 +362,16 @@
     /* ---------- global shortcuts ---------- */
     addEventListener("keydown", (e) => {
       const editable = /^(input|textarea|select)$/i.test((e.target.tagName || "")) && e.target !== input;
+      const visible = term.classList.contains("is-open") && !term.classList.contains("is-min");
       if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
         e.preventDefault();
-        term.classList.contains("is-open") ? close() : open();
-      } else if (e.key === "`" && !editable && !term.classList.contains("is-open")) {
+        visible ? close() : open();
+      } else if (e.key === "`" && !editable && !visible) {
         e.preventDefault();
         open();
       } else if (e.key === "Escape") {
         if (matrix && matrix.classList.contains("is-on")) return stopMatrix();
-        if (term.classList.contains("is-open")) close();
+        if (visible) close();
       }
     });
 
